@@ -1,0 +1,225 @@
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body section {
+  height: 100vh;
+  width: 80vw;
+  margin: 0 auto;
+}
+
+body section .title {
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1;
+  letter-spacing: 0.1em;
+}
+
+body section .innerTitle {
+  font-size: 50px;
+  padding-top: 70px;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, right top, from(#0a1e46), to(#5aa0ff));
+  background: linear-gradient(90deg, #0a1e46, #5aa0ff);
+}
+
+.header .headerTitle {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.header .headerTitle .mainTitle {
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 1;
+  letter-spacing: .1em;
+}
+
+.header .headerTitle .subTitle {
+  font-size: 20px;
+  margin-top: 5px;
+  letter-spacing: .1em;
+}
+
+.header .headerTitle .subTitle span {
+  color: yellow;
+}
+
+.header .menu {
+  max-width: 70%;
+  margin: 40px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-size: 24px;
+}
+
+.header .menu a {
+  text-decoration: none;
+}
+
+.header .menu a div {
+  padding: 10px 20px;
+  color: black;
+}
+
+.header .menu a div:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.header .menu a div::before {
+  content: "";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin-right: 0.2em;
+}
+
+.header .menu a div.Profile::before {
+  background: url(../images/Profile.png) no-repeat;
+  background-size: contain;
+}
+
+.header .menu a div.Works::before {
+  background: url(../images/Works.png) no-repeat;
+  background-size: contain;
+}
+
+.header .menu a div.Contact::before {
+  background: url(../images/Contact.png) no-repeat;
+  background-size: contain;
+  vertical-align: middle;
+}
+
+#Profile {
+  min-height: 80vh;
+  height: auto;
+}
+
+#Profile .inner .innerTitle::before {
+  content: "";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background: url(../images/Profile.png) no-repeat;
+  background-size: contain;
+  vertical-align: bottom;
+}
+
+#Profile .inner .profile {
+  margin-top: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#Profile .inner .profile .discription {
+  width: 48%;
+  text-align: left;
+}
+
+#Profile .inner .profile .discription p {
+  padding: 20px;
+}
+
+#Profile .inner .profile .skill {
+  width: 48%;
+  text-align: center;
+}
+
+#Profile .inner .profile .skill .images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#Profile .inner .profile .skill .images img {
+  height: 100px;
+  margin: 5px;
+}
+
+#Works {
+  height: auto;
+  margin-bottom: 150px;
+}
+
+#Works .inner {
+  margin-bottom: 100px;
+}
+
+#Works .inner .innerTitle::before {
+  content: "";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background: url(../images/Works.png) no-repeat;
+  background-size: contain;
+  margin-right: 0.5em;
+  vertical-align: bottom;
+}
+
+#Works .inner .works {
+  margin-top: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#Works .inner .works a {
+  width: 18%;
+}
+
+#Contact {
+  background-color: gray;
+  margin: 0;
+  height: 50vh;
+  width: 100%;
+}
+
+#Contact .inner .innerTitle::before {
+  content: "";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background: url(../images/Contact.png) no-repeat;
+  background-size: contain;
+  margin-right: 0.5em;
+  vertical-align: middle;
+}
+/*# sourceMappingURL=style.css.map */
