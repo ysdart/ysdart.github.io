@@ -1,36 +1,12 @@
 services:
-  02_frontend:
+  app:
     build:
       context: ./02_frontend
       dockerfile: Dockerfile
-    volumes:
-      - ./02_frontend:/02_frontend
-    command: npm run dev -- --host 0.0.0.0 --port 5173
     ports:
       - "5173:5173"
-    depends_on:
-      - 03_backend
+    volumes:
+      - ./02_frontend:/app
+      - /app/node_modules
     stdin_open: true
     tty: true
-  03_backend:
-    build:
-      context: ./03_backend
-      dockerfile: Dockerfile
-    volumes:
-      - ./03_backend:/03_backend
-    command: npm run dev
-    ports:
-      - "3000:3000"
-  
-  db:
-    build:
-      context: ./04_db
-      dockerfile: Dockerfile
-    volumes:
-      - ./04_db:/04_db
-    ports:
-      - "5432:5432"
-    environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
-      - POSTGRES_DB=postgres
